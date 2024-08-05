@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="anim">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/anim/dubloon.zip!/" />
+      <root url="jar://$PROJECT_DIR$/anim/slot_machine.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
