@@ -1,0 +1,2023 @@
+
+
+local internalloot =
+{
+	--[[
+	["sample"] =
+	{
+		--[Optional] container that spawns with the loot in it see prefabs/treasurechest.lua
+		--any prefab with a container component should work
+		chest = "treasurechest",
+
+		--All items in loot is given when a treasure is dug up	
+		loot =
+		{
+			dubloon = 2,
+			redgem = 4
+		},
+
+		--'num_random_loot' items are given from random_loot (a weighted table)
+		num_random_loot = 1,
+		random_loot =
+		{
+			purplegem = 1,
+			orangegem = 1,
+			yellowgem = 1,
+			greengem = 1,
+			redgem = 5,
+			bluegem = 5,
+		},
+
+		--Every item in chance_loot has a custom chance of being given
+		--Possible for nothing or everything to be given
+		chance_loot =
+		{
+			dubloon = 0.25,
+			goldnugget = 0.25,
+			bluegem = 0.1
+		},
+
+		--A custom function used to give items
+		custom_lootfn = function(lootlist) end
+	},
+	--]]
+	["snaketrap"] =
+	{
+		loot =
+		{
+			snake = 3,
+			dubloon = 3,
+		},
+		random_loot =
+		{
+			purplegem = 1,
+			orangegem = 1,
+			yellowgem = 1,
+			greengem = 1,
+			redgem = 5,
+			bluegem = 5,
+		},
+	},
+
+	["1dubloon"] =
+	{
+		loot =
+		{
+			dubloon = 1
+		}
+	},
+	
+	["3dubloons"] =
+	{
+		loot =
+		{
+			dubloon = 3
+		}
+	},
+	
+	["10dubloons"] =
+	{
+		loot =
+		{
+			dubloon = 10
+		}
+	},
+
+	["SuperTelescope"] =
+	{
+		loot =
+		{
+			supertelescope = 1,
+			dubloon = 5,
+			spear_poison = 1,
+			boat_lantern = 1,
+		},
+
+		random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+	},
+
+	--Took the actual keys out of these now that they're granted in other ways. 
+	--Don't want to remove the loot tables incase people have saved worlds with these loots set.
+
+	["WoodlegsKey1"] =
+	{
+		loot =
+		{
+			dubloon = 10,
+		}
+	},
+
+	["WoodlegsKey2"] =
+	{
+		loot =
+		{
+			dubloon = 10,
+		}
+	},
+
+	["WoodlegsKey3"] =
+	{
+		loot =
+		{
+			dubloon = 10,
+		}
+	},
+
+	["minerhat"] =
+	{
+		loot =
+		{
+			minerhat = 1,
+			dubloon = 5,
+			obsidianaxe =1,
+		},
+
+		random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+	},
+
+	["seamanscarepackage"] =
+	{
+		chest = "pandoraschest",
+		loot =
+		{
+			dubloon = 5,
+			telescope = 1,
+			armor_lifejacket = 1,
+			captainhat = 1
+		},
+
+		random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+	},
+
+	["gems"] =
+	{
+		chest = "treasurechest",
+		loot =
+		{
+			goldnugget = 3,
+		},
+
+		random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+			chance_loot =
+		{
+			purplegem = .5,
+			orangegem = .25,
+			yellowgem = .25,
+			greengem = .25
+		},
+	},
+
+	["dubloonsandgem"] =
+	{
+		loot =
+		{
+			dubloon = 5
+		},
+		random_loot =
+		{
+			purplegem = 1,
+			redgem = 5,
+			bluegem = 5,
+		}
+	},
+
+
+	["ChickenOfTheSea"] =
+	{
+		loot =
+		{
+			dubloon = 5,
+			tunacan = 5,
+		},
+	
+		random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+    },
+-------------------------------------------------------DAN ADDED FROM HERE
+["BootyInDaBooty"] =
+	{
+		loot =
+		{
+			dubloon = 5,
+			piratepack = 1,
+		},
+	
+		random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+["OneTrueEarring"] =
+	{
+		loot =
+		{
+			earring = 1,
+		},
+	
+		random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+["PegLeg"] =
+	{
+		loot =
+		{
+			dubloon = 2,
+			peg_leg = 1,
+		},
+	
+		random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+["VolcanoStaff"] =
+	{
+		loot =
+		{
+			dubloon = 6,
+			volcanostaff = 1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+["Gladiator"] =
+	{
+		loot =
+		{
+			dubloon = 2,
+			footballhat = 1,
+			spear = 1,
+			armorseashell= 1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+["FancyHandyMan"] =
+	{
+		loot =
+		{
+			dubloon = 1,
+			goldenaxe = 1,
+			goldenshovel = 1,
+			goldenpickaxe= 1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+["LobsterMan"] =
+	{
+		loot =
+		{
+			dubloon = 4,
+			boat_lantern = 1,
+			seatrap = 1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+["Compass"] =
+	{
+		loot =
+		{
+			dubloon = 3,
+			compass = 1,
+			boneshard = 2,
+			messagebottleempty = 1,
+			sand = 1,
+		},
+	
+		random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		}
+
+	},
+
+["Scientist"] =
+	{
+		loot =
+		{
+			dubloon = 3,
+			transistor =1,
+			gunpowder =3,
+			heatrock = 1,
+		},
+	
+		random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+["Alchemist"] =
+	{
+		loot =
+		{
+			dubloon = 2,
+			antivenom =1,
+			healingsalve =3,
+			blowdart_sleep = 2,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+["Shaman"] =
+	{
+		loot =
+		{
+			dubloon = 1,
+			nightsword =1,
+			amulet =1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+["FireBrand"] =
+	{
+		loot =
+		{
+			dubloon = 2,
+			obsidianaxe =1,
+			gunpowder =2,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+["SailorsDelight"] =
+	{
+		loot =
+		{
+			dubloon = 4,
+			clothsail =1,
+			boatrepairkit =1,
+			boat_lantern =1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+["WarShip"] =
+	{
+		loot =
+		{
+			dubloon = 3,
+			coconade =3,
+			boatcannon =1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+["Desperado"] =
+	{
+		loot =
+		{
+			dubloon = 1,
+			snakeskinhat =1,
+			armor_snakeskin =1,
+			spear_launcher = 2,
+			spear = 1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+	["JewelThief"] =
+	{
+		loot =
+		{
+			dubloon = 5,
+			goldnugget =6,
+			purplegem =2,
+			redgem = 4,
+			bluegem = 3,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		}
+
+	},
+
+	["AntiqueWarrior"] =
+	{
+		loot =
+		{
+			dubloon = 5,
+			ruins_bat =1,
+			ruinshat =1,
+			armorruins = 1,
+			bluegem = 2,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		}
+
+
+	},
+
+	["Yaar"] =
+	{
+		loot =
+		{
+			dubloon = 1,
+			telescope =1,
+			piratehat =1,
+			boatcannon = 1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+	["GdayMate"] =
+	{
+		loot =
+		{
+			dubloon = 3,
+			boomerang =1,
+			snakeskin =3,
+			strawhat = 1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+	["ToxicAvenger"] =
+	{
+		loot =
+		{
+			dubloon = 1,
+			gashat =1,
+			venomgland =3,
+			spear_poison = 1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+	["MadBomber"] =
+	{
+		loot =
+		{
+			dubloon = 2,
+			coconade =2,
+			obsidiancoconade =1,
+			gunpowder = 2,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+	["FancyAdventurer"] =
+	{
+		loot =
+		{
+			dubloon = 4,
+			goldenmachete =1,
+			tophat =1,
+			rope = 3,
+			telescope = 1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		}
+
+
+
+	},
+
+	["ThunderBall"] =
+	{
+		loot =
+		{
+			dubloon = 6,
+			spear_launcher = 2,
+			spear = 1,
+			blubbersuit =1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+	["TombRaider"] =
+	{
+		loot =
+		{
+			dubloon = 4,
+			boneshard =3,
+			nightmarefuel =4,
+			purplegem = 2,
+			goldnugget = 3,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		}
+
+
+	},
+
+	["SteamPunk"] =
+	{
+		loot =
+		{
+			dubloon = 1,
+			gears =4,
+			transistor =2,
+			telescope= 1,
+			goldnugget = 2,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		}
+
+
+	},
+
+	["CapNCrunch"] =
+	{
+		loot =
+		{
+			dubloon = 4,
+			piratehat =1,
+			boatcannon =1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+	["AyeAyeCapn"] =
+	{
+		loot =
+		{
+			dubloon = 1,
+			captainhat =1,
+			armor_lifejacket =1,
+			tunacan =1,
+			trawlnet =1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		}
+
+
+
+	},
+
+	["BreakWind"] =
+	{
+		loot =
+		{
+			dubloon = 4,
+			armor_windbreaker = 1,
+			obsidianmachete =1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+		["Diviner"] =
+	{
+		loot =
+		{
+			dubloon = 4,
+			diviningrod =1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+		["GoesComesAround"] =
+	{
+		loot =
+		{
+			dubloon = 3,
+			boomerang =1,
+			trap_teeth =2,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+		["GoldGoldGold"] =
+	{
+		loot =
+		{
+			dubloon = 6,
+			goldnugget = 5,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+		["FirePoker"] =
+	{
+		loot =
+		{
+			dubloon = 2,
+			spear_obsidian = 1,
+			armorobsidian = 1,
+		},
+	
+	random_loot =
+		{
+			redgem = 1,
+			bluegem = 1,
+			papyrus = 1,
+			tunacan = 1,
+			blueprint = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			purplegem = .1,
+			redgem = .25,
+			bluegem = .25,
+		}
+
+	},
+
+		["DeadmansTreasure"] =
+	{
+		loot =
+		{
+			dubloon = 4,
+			boatrepairkit = 1,
+			goldenmachete = 1,
+			obsidiancoconade = 3,
+		},
+	
+	random_loot =
+		{
+			fabric = 1,
+			papyrus = 1,
+			tunacan = 1,
+			goldnugget = 1,
+			gears = 1,
+			purplegem = 1,
+			redgem =1,
+			bluegem =1,
+			rope =1,
+
+		},
+
+		chance_loot =
+		{
+			harpoon = .1,
+			boatcannon = .01,
+			rope = .25,
+		}
+
+	},
+
+-------------------------------GOOD LIST
+
+	["staydry"] = 
+	{
+		loot = 
+		{
+			palmleaf_umbrella = 1,
+			armor_snakeskin = 1,
+			snakeskinhat = 1,
+		},
+	},
+
+	["gears"] = 
+	{
+		loot = 
+		{
+			gears = 5,
+			
+		},
+	},
+
+	["cooloff"] = 
+	{
+		loot = 
+		{
+			ice = 3,
+			hawaiianshirt = 1,
+			umbrella = 1,
+		},
+	},
+
+	["birders"] = 
+	{
+		loot = 
+		{
+			birdtrap = 1,
+			featherhat = 1,
+			seeds = 4,
+		},
+	},
+
+	["slot_anotherspin"] = 
+	{
+		loot = 
+		{
+			dubloon = 1,
+		},
+	},
+
+	["slot_goldy"] = 
+	{
+		loot = 
+		{
+			goldnugget = 5,
+		},
+	},
+	
+	["slot_honeypot"] = 
+	{
+		loot = 
+		{
+			beehat = 1,
+			bandage = 1,
+			honey = 5,
+		},
+	},
+
+	["slot_warrior1"] = 
+	{
+		loot = 
+		{
+			footballhat = 1,
+			armorwood = 1,
+			spear = 1,
+		},
+	},
+
+	["slot_warrior2"] = 
+	{
+		loot = 
+		{
+			armormarble = 1,
+			hambat = 1,
+			blowdart_pipe = 1,
+		},
+	},
+
+	["slot_warrior3"] = 
+	{
+		loot = 
+		{
+			trap_teeth = 1,
+			armorgrass = 1,
+			boomerang = 1,
+		},
+	},
+
+	["slot_warrior4"] = 
+	{
+		loot = 
+		{
+			spear_launcher = 1,
+			spear_poison = 1,
+			armorseashell = 1,
+			coconade= 1,
+		},
+	},
+
+	["slot_scientist"] = 
+	{
+		loot = 
+		{
+			transistor = 3,
+			heatrock = 1,
+			gunpowder= 3,
+		},
+	},
+
+	["slot_walker"] = 
+	{
+		loot = 
+		{
+			cane = 1,
+			goldnugget= 3,
+		},
+	},
+
+	["slot_gemmy"] = 
+	{
+		loot = 
+		{
+			redgem = 3,
+			bluegem= 3,
+		},
+	},
+
+	["slot_bestgem"] = 
+	{
+		loot = 
+		{
+			purplegem = 3,
+		},
+	},
+
+	["slot_lifegiver"] = 
+	{
+		loot = 
+		{
+			amulet = 1,
+			goldnugget = 3,
+		},
+	},
+
+	["slot_chilledamulet"] = 
+	{
+		loot = 
+		{
+			blueamulet = 1,
+			goldnugget = 3,
+		},
+	},
+
+	["slot_icestaff"] = 
+	{
+		loot = 
+		{
+			icestaff = 1,
+			goldnugget = 3,
+		},
+	},
+
+	["slot_firestaff"] = 
+	{
+		loot = 
+		{
+			firestaff = 1,
+			goldnugget = 3,
+		},
+	},
+
+	["slot_coolasice"] = 
+	{
+		loot = 
+		{
+			icehat = 1,
+			-- tropicalfan = 1,
+			palmleaf_umbrella = 1,
+		},
+	},
+
+	["slot_gunpowder"] = 
+	{
+		loot = 
+		{
+			gunpowder = 5,
+		},
+	},
+
+	["slot_darty"] = 
+	{
+		loot = 
+		{
+			blowdart_pipe = 1,
+			blowdart_sleep = 1,
+			blowdart_fire = 1,
+		},
+	},
+
+	["slot_firedart"] = 
+	{
+		loot = 
+		{
+			blowdart_fire = 3,
+			goldnugget = 3,
+		},
+	},
+
+	["slot_sleepdart"] = 
+	{
+		loot = 
+		{
+			blowdart_sleep = 3,
+			goldnugget = 3,
+		},
+	},
+
+	["slot_blowdart"] = 
+	{
+		loot = 
+		{
+			blowdart_pipe = 3,
+			goldnugget = 3,
+		},
+	},
+
+	["slot_speargun"] = 
+	{
+		loot = 
+		{
+			spear_launcher = 1,
+			spear = 1,
+			goldnugget = 3,
+		},
+	},
+
+
+	["slot_dapper"] = 
+	{
+		loot = 
+		{
+			cane = 1,
+			goldnugget = 3,
+			tophat = 1,
+		},
+	},
+
+	["slot_speed"] = 
+	{
+		loot = 
+		{
+			yellowamulet = 1,
+			nightmarefuel = 3,
+			goldnugget = 3,
+		},
+	},
+
+	["slot_coconades"] = 
+	{
+		loot = 
+		{
+			coconade= 3,
+			goldnugget = 3,
+		},
+	},
+
+	["slot_obsidian"] = 
+	{
+		loot = 
+		{
+			obsidian= 5,
+		},
+	},
+
+	["slot_thuleciteclub"] = 
+	{
+		loot = 
+		{
+			ruins_bat= 1,
+			goldnugget = 3,
+		},
+	},
+
+	["slot_thulecitesuit"] = 
+	{
+		loot = 
+		{
+			armorruins= 1,
+			goldnugget = 3,
+		},
+	},
+
+	["slot_ultimatewarrior"] = 
+	{
+		loot = 
+		{
+			armorruins= 1,
+			ruins_bat= 1,
+			ruinshat= 1,
+		},
+	},
+
+	["slot_goldenaxe"] =
+	{
+		loot =
+		{
+			goldenaxe = 1,
+			goldnugget = 3,
+		},
+	},
+
+	["slot_monkeyball"] =
+	{
+		loot = 
+		{
+			monkeyball = 1,
+			cave_banana = 2,
+		},
+	},
+
+
+---------------------------------------OK LIST
+
+	["firestarter"] = 
+	{
+		loot = 
+		{
+			log = 2,
+			-- twigs = 1,
+			cutgrass = 3,
+		},
+	},
+
+	["geologist"] = 
+	{
+		loot = 
+		{
+			rocks = 1,
+			goldnugget = 1,
+			obsidian = 1,
+		},
+	},
+
+	["3cutgrass"] =
+	{
+		loot =
+		{
+			cutgrass = 5,
+		},
+	},	
+
+	["3logs"] =
+	{
+		loot =
+		{
+			log = 3,
+		},
+	},
+
+	["3twigs"] =
+	{
+		loot =
+		{
+			twigs = 3,
+		},
+	},
+
+	["slot_torched"] =
+	{
+		loot =
+		{
+			torch = 1,
+			charcoal = 2,
+			ash = 2,
+		},
+	},
+
+	["slot_jelly"] =
+	{
+		loot =
+		{
+			jellyfish_dead = 3,
+		},
+	},
+
+	["slot_handyman"] =
+	{
+		loot =
+		{
+			axe = 1,
+			hammer = 1,
+			shovel = 1,
+		},
+	},
+
+	["slot_poop"] =
+	{
+		loot =
+		{
+			poop = 5,
+		},
+	},
+
+	["slot_berry"] =
+	{
+		loot =
+		{
+			berries = 5,
+		},
+	},
+
+	["slot_limpets"] =
+	{
+		loot =
+		{
+			limpets = 5,
+		},
+	},
+
+	["slot_seafoodsurprise"] =
+	{
+		loot =
+		{
+			limpets = 2,
+			jellyfish_dead = 1,
+			tropical_fish = 2,
+			fish_med = 1,
+		},
+	},
+
+	["slot_bushy"] =
+	{
+		loot =
+		{
+			berries = 3,
+			dug_berrybush2 = 1, --cut down from 3
+		},
+	},
+
+
+	["slot_bamboozled"] =
+	{
+		loot =
+		{
+			dug_bambootree = 1,
+			bamboo = 3,
+		},
+	},
+
+	["slot_grassy"] =
+	{
+		loot =
+		{
+			trap = 1,
+			cutgrass = 3,
+			strawhat = 1,
+		},
+	},
+
+	["slot_prettyflowers"] =
+	{
+		loot =
+		{
+			petals = 5,
+			flowerhat = 1,
+		},
+	},
+
+	["slot_witchcraft"] =
+	{
+		loot =
+		{
+			flower_evil = 5,
+			red_cap= 1,
+			green_cap = 1,
+			blue_cap = 1,
+		},
+	},
+
+	["slot_bugexpert"] =
+	{
+		loot =
+		{
+			bugnet = 1,
+			fireflies = 3,
+			butterfly = 3,
+		},
+	},
+
+	["slot_flinty"] =
+	{
+		loot =
+		{
+			flint = 5,
+		},
+	},
+
+	["slot_fibre"] =
+	{
+		loot =
+		{
+			cave_banana = 1,
+			dragonfruit = 1,
+			watermelon = 1,
+		},
+	},
+
+	["slot_drumstick"] =
+	{
+		loot =
+		{
+			drumstick = 3,
+		},
+	},
+
+	["slot_fisherman"] =
+	{
+		loot =
+		{
+			fishingrod = 1,
+			fish_med = 3,
+			tropical_fish = 3,
+		},
+	},
+
+    ["slot_bonesharded"] =
+	{
+		loot =
+		{
+			hammer = 1,
+			skeleton = 3,
+		},
+	},
+
+    ["slot_jerky"] =
+	{
+		loot =
+		{
+			meat_dried = 3,
+		},
+	},
+
+    ["slot_coconutty"] =
+	{
+		loot =
+		{
+			coconut = 5,
+		},
+	},
+
+	["slot_camper"] =
+	{
+		loot =
+		{
+			heatrock = 1,
+			bedroll_straw = 1,
+			meat_dried = 1,
+		},
+	},
+
+    ["slot_ropey"] =
+	{
+		loot =
+		{
+			rope = 5,
+		},
+	},
+
+  	["slot_tailor"] =
+	{
+		loot =
+		{
+			sewing_kit = 1,
+			fabric= 3,
+			tophat = 1,
+		},
+	},
+
+	["slot_spiderboon"] =
+	{
+		loot =
+		{
+			spidergland = 2,
+			silk = 5,
+			monstermeat = 3,
+		},
+	},
+
+
+
+--------------------------------------BAD LIST
+	["slot_spiderattack"] =
+	{
+		loot =
+		{
+			spider = 3,
+		},
+	},
+
+  	["slot_mosquitoattack"] =
+	{
+		loot =
+		{
+			mosquito_poison= 5,
+		},
+	},
+
+  	["slot_snakeattack"] =
+	{
+		loot =
+		{
+			snake = 3,
+		},
+	},
+
+	  	["slot_monkeysurprise"] =
+	{
+		loot =
+		{
+			primeape = 2,
+		},
+	},
+
+		["slot_poisonsnakes"] =
+	{
+		loot =
+		{
+			snake_poison = 2,
+		},
+	},
+
+		["slot_hounds"] =
+	{
+		loot = 
+		{
+			hound = 2,
+		},
+	},
+
+}
+return internalloot
